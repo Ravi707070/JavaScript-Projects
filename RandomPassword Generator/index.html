@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <div class="mb-4 text-center">
+            <span id="pass-box" class="text-xl font-bold">Testing</span>
+        </div>
+        <div class="mb-4 flex justify-between items-center">
+            <div class="text-gray-700">Password Length</div>
+            <input type="number" id="total-char" max="30" min="2" value="10" class="border rounded p-2 w-20 text-center" />
+        </div>
+        <div class="mb-4 flex justify-between items-center">
+            <label for="upper-case" class="text-gray-700">Contains Uppercase</label>
+            <input type="checkbox" id="upper-case" checked class="form-checkbox h-5 w-5 text-blue-600" />
+        </div>
+        <div class="mb-4 flex justify-between items-center">
+            <label for="lower-case" class="text-gray-700">Contains Lowercase</label>
+            <input type="checkbox" id="lower-case" class="form-checkbox h-5 w-5 text-blue-600" />
+        </div>
+        <div class="mb-4 flex justify-between items-center">
+            <label for="numbers" class="text-gray-700">Contains Numbers</label>
+            <input type="checkbox" id="numbers" class="form-checkbox h-5 w-5 text-blue-600" />
+        </div>
+        <div class="mb-4 flex justify-between items-center">
+            <label for="symbols" class="text-gray-700">Contains Symbols</label>
+            <input type="checkbox" id="symbols" class="form-checkbox h-5 w-5 text-blue-600" />
+        </div>
+        <div class="text-center">
+            <button id="btn" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700">
+                Generate
+            </button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
