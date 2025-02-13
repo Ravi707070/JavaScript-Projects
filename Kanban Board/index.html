@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="board max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6">
+        <form id="todo-form" class="flex mb-4">
+            <input type="text" placeholder="Add a todo" id="todo-input" class="flex-grow p-2 border border-gray-300 rounded-l-lg focus:outline-none">
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-r-lg hover:bg-blue-600">ADD +</button>
+        </form>
 
+        <div class="lanes grid grid-cols-3 gap-4">
+            <div class="swim-lane bg-gray-200 p-4 rounded-lg" id="todo-lane">
+                <h3 class="heading text-xl font-semibold mb-4">TODO</h3>
+                <p class="task bg-white p-2 mb-2 rounded-lg shadow-md" draggable="true">Get that book</p>
+                <p class="task bg-white p-2 mb-2 rounded-lg shadow-md" draggable="true">Read that thing</p>
+                <p class="task bg-white p-2 mb-2 rounded-lg shadow-md" draggable="true">Capture the image</p>
+            </div>
+            <div class="swim-lane bg-gray-200 p-4 rounded-lg" id="doing-lane">
+                <h3 class="heading text-xl font-semibold mb-4">DOING</h3>
+                <p class="task bg-white p-2 mb-2 rounded-lg shadow-md" draggable="true">Completed half of the book</p>
+                <p class="task bg-white p-2 mb-2 rounded-lg shadow-md" draggable="true">Completed 4km of brisk walking</p>
+            </div>
+            <div class="swim-lane bg-gray-200 p-4 rounded-lg" id="done-lane">
+                <h3 class="heading text-xl font-semibold mb-4">DONE</h3>
+                <p class="task bg-white p-2 mb-2 rounded-lg shadow-md" draggable="true">3km of jogging</p>
+            </div>
+        </div>
+    </div>
+ 
+    <script src="todo.js"></script>
+    <script src="drag.js"></script>
+</body>
+</html>
